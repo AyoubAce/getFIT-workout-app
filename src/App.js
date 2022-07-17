@@ -5,7 +5,7 @@ import Hero from "./components/hero/Hero";
 import Navbar from "./components/nav/Navbar";
 import Exercises from "./components/exercises/Exercises";
 import {useDispatch } from "react-redux";
-import {getExercises, getMainData} from "./app/features/exercisesSlice"
+import {setExercises, getMainData, setShowExercises} from "./app/features/exercisesSlice"
 
 function App() {
 
@@ -23,7 +23,8 @@ function App() {
       })
       .then((res) => {
         dispatch(getMainData(res.data))
-        dispatch(getExercises(res.data))
+        dispatch(setExercises(res.data))
+        dispatch(setShowExercises(res.data.slice(0,10)))
       })
       .catch((error) => console.log(error));
   };

@@ -20,3 +20,16 @@ header li:hover{
 header li{
     padding:0.5rem 0;
 }
+
+@media (min-width:768px) {
+    header{
+        padding:1rem 4rem;
+    }
+ 
+}
+@media (min-width:1024px) {
+    header{
+        padding:1rem 7rem;
+     }
+ 
+}

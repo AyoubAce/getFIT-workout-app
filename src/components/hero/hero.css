@@ -1,16 +1,15 @@
 .hero-section{
 color:var(--txt-white);
-padding:5rem 0;
+padding:5rem 1rem;
 display: flex;
 flex-direction: column;
-justify-content: center;
+justify-content: space-between;
 align-items: center;
-gap:3rem;
 position: relative;
 /* height: 70vh; */
 
 }
-
+/* blury pink light on top */
 .blur-effect{
     position: absolute;
     height:150px;
@@ -20,35 +19,16 @@ position: relative;
     top:3rem;
     left:2rem;
     filter: blur(70px);
+    border:1px solid salmon;
 
 }
-.hero-left{
-    padding:2rem 1rem;
-    order:2;
-    position: relative;
-    width: fit-content;
-    text-align: center;
-}
-.hero-left p{
-   /* margin-top: 1rem; */
-   color:var(--txt-gray)
-   
-}
-.hero-left h1{
-    font-size: 3.5rem;
-    text-transform: uppercase;
-    font-family: var(--saira);
-}
-.hero-left h3{
-    font-size: 1.5rem;
-    text-transform: uppercase;
-
-}
-.absolute{
+/* get started animation */
+.hero-section .absolute{
     position: absolute;
-   left:-2rem;
-   top:35%;
-    transform: translate(-50%,50%);
+    left:-2.5rem;
+    bottom: 9rem;
+    transform: translate(0,-50%);
+   
 }
 .get-started{ 
 background-color: var(--dark-purple);
@@ -71,6 +51,7 @@ height:80%;
 border-radius: 10px;
 z-index: 1;
 right:.5rem;
+clip-path: polygon(100% 0%, 75% 50%, 100% 100%, 25% 100%, 0% 50%, 25% 0%);
 animation: get-started 3000ms ease-out infinite;
 }
 .get-started>span{
@@ -81,13 +62,36 @@ animation: get-started 3000ms ease-out infinite;
     
 }
 
+.hero-left{
+    padding:2rem 0rem;
+    order:2;
+    position: relative;
+    width: fit-content;
+    text-align: center;
+}
+.hero-left p{
+   /* margin-top: 1rem; */
+   color:var(--txt-gray)
+   
+}
+.hero-left h1{
+    font-size: 3.5rem;
+    text-transform: uppercase;
+    font-family: var(--saira);
+}
+.hero-left h3{
+    font-size: 1.5rem;
+    text-transform: uppercase;
+
+}
+
 
 .hero-right{
     order:1;
 }
 
 .hero-right img{
-    width:300px;
+    width:250px;
 }
 
 @keyframes get-started{
@@ -103,12 +107,46 @@ animation: get-started 3000ms ease-out infinite;
     
 }
 
-@media (min-width:786px) {
+@media (min-width:768px) {
     .hero-section{
        flex-direction: row;
+       padding:5rem 4rem;
     }
     .hero-left{
         order:1;
     }
+    .hero-left h1{
+        font-size: 4rem;
+        text-transform: uppercase;
+        font-family: var(--saira);
+    }
+    .hero-left h3{
+        font-size: 1.8rem;
+        text-transform: uppercase;
     
+    }
+    .hero-section .absolute{
+        position: absolute;
+        left:50%;
+        bottom: 40%;
+        transform: translate(-50%,-50%);
+    }
+}
+
+
+@media (min-width:1024px) {
+    .hero-section{
+        padding:5rem 7rem;
+    }
+    .hero-left h1{
+        font-size: 5rem;
+ 
+    }
+    .hero-left h3{
+        font-size: 2rem;
+    }
+    
+    .hero-right img{
+        width:340px;
+    }
 }

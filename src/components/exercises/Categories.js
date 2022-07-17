@@ -1,14 +1,16 @@
 import React, { useRef } from "react";
 import arrow from "../../assets/arrow.svg";
-import { useSelector } from "react-redux";
+import { useSelector, useDispatch } from "react-redux";
+import { setExercises, setShowExercises} from "../../app/features/exercisesSlice";
 
 const Categories = () => {
     //more than 1327 exercise
+    const mainData=useSelector(state=>state.data.mainData)
     const exercises=useSelector(state=>state.data.exercises)
- 
-    //get body parts by removing duplicates 
-    const bodyParts= new Set(exercises?.map(item=>item.bodyPart));
 
+    //get body parts by removing duplicates 
+    const bodyParts= new Set(mainData?.map(item=>item.bodyPart));
+    const dispatch= useDispatch()
 
     const categories = useRef();
     const leftArrow = useRef();
@@ -27,9 +29,20 @@ const Categories = () => {
         behavior:'smooth'
       })
     }
+
+    const handleCategory=(category)=>{
+      if(category==="all"){
+        dispatch(setExercises(mainData))
+        dispatch(setShowExercises(mainData))
+      }
+      else{
+        dispatch(setExercises(mainData.filter(item=>item.bodyPart===category)))
+        dispatch(setShowExercises(mainData.filter(item=>item.bodyPart===category)))
+      }
+    }
   return (
     <div className="categories-container">
-    <h4>Body Parts</h4>
+    <h3>Body Parts</h3>
     <img
         ref={leftArrow}
         src={arrow}
@@ -46,7 +59,7 @@ const Categories = () => {
       />
     <div ref={categories} className="categories">
      {["all",...bodyParts]?.map((item,index)=>{
-        return <span key={index}>{item}</span>
+        return <span key={index} onClick={()=>handleCategory(item)}>{item}</span>
      })}
     </div>
   </div>

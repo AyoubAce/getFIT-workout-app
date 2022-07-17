@@ -1,8 +1,9 @@
 import { createSlice } from "@reduxjs/toolkit";
 
 const initialState = {
-  mainData: [],
+  mainData:[],
   exercises: [],
+  showExercises: [],
   exercise: {},
   similarExercises: [],
   searchResult: [],
@@ -12,11 +13,14 @@ const exerciseSlice = createSlice({
   name: "data",
   initialState,
   reducers: {
-    getMainData: (state, action) => {
-      state.mainData = action.payload;
-    },
-    getExercises: (state, action) => {
-      state.exercises = action.payload;
+      getMainData: (state, action) => {
+        state.mainData = action.payload;
+      },
+      setExercises: (state, action) => {
+        state.exercises = action.payload;
+      },
+    setShowExercises:(state,action)=>{
+        state.showExercises= action.payload.slice(0,10)
     },
     //gets exercises as payload and return a set of unique body parts
     setBodyParts:(state)=>{
@@ -35,5 +39,5 @@ const exerciseSlice = createSlice({
     searchedExercise: (state, action) => {},
   },
 });
-export const { getMainData, getExercises, setBodyParts, getBodyParts } = exerciseSlice.actions;
+export const { getMainData,setShowExercises, setExercises, setBodyParts, getBodyParts } = exerciseSlice.actions;
 export default exerciseSlice.reducer;

@@ -2,7 +2,7 @@ import React from "react";
 
 const SearchExercise = () => {
   return (
-    <div className="search">
+    <div className="search-container">
       <input type="text" placeholder="search exercises..." />
       <button>Search</button>
     </div>

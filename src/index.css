@@ -26,13 +26,13 @@ body {
 }
 html {
   background-color: var(--base-color);
-  background-image: url("https://www.transparenttextures.com/patterns/dark-brick-wall.png");
+  /* background-image: url("https://www.transparenttextures.com/patterns/dark-brick-wall.png");
   background-image: url("https://www.transparenttextures.com/patterns/diagonales-decalees.png");
   background-image: url("https://www.transparenttextures.com/patterns/green-dust-and-scratches.png");
   background-image: url("https://www.transparenttextures.com/patterns/binding-dark.png");
   background-image: url("https://www.transparenttextures.com/patterns/otis-redding.png");
   background-image: url("https://www.transparenttextures.com/patterns/snow.png");
-  background-image: url("https://www.transparenttextures.com/patterns/stardust.png");
+  background-image: url("https://www.transparenttextures.com/patterns/stardust.png"); */
 }
 a{
   color:unset;
