@@ -1,0 +1,22 @@
+header{
+    background-color: var(--base-color);
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+   color:var(--txt-white);
+   padding:1rem 2rem;
+}
+header img{
+    width: 100px;
+}
+header ul{
+    list-style: none;
+    display: flex;
+    gap:1.5rem;
+}
+header li:hover{
+  border-bottom: 1px solid var(--pink);
+}
+header li{
+    padding:0.5rem 0;
+}
