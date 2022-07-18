@@ -1,16 +1,17 @@
 import React from 'react'
 import "./navbar.css"
 import logo from "../../assets/logo.svg"
+import {Link} from "react-router-dom"
 
 const Navbar = () => {
   return (
     <header>
     <div>
-        <img src={logo} alt='logo' />
+        <Link to="/"><img src={logo} alt='logo' /></Link>
     </div>
     <ul>
-        <li> <a href='/home'>HOME</a></li>
-        <li><a href='/exercise'>EXERCISES</a> </li>
+        <li><Link to="/"> HOME</Link> </li>
+        {/* <li><a href='/exercise'>EXERCISES</a> </li> */}
     </ul>
 
     </header>

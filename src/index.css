@@ -8,7 +8,7 @@
   --pink:#E9A6A6;
   --white-bg:rgb(255, 255, 255);
   --txt-white:rgb(236, 236, 236);
-  --txt-gray:rgb(148, 147, 147);
+  --txt-gray:rgb(163, 162, 162);
   --txt-dark:#1F1D36;
  --box-shadow: -2px 2px 10px -3px rgba(1, 2, 1, 0.712);
 
@@ -23,6 +23,7 @@
 body {
   max-width: 1600px;
   font-family: var(--roboto);
+  color:var(--txt-white);
 }
 html {
   background-color: var(--base-color);

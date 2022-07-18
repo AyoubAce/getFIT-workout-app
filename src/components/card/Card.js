@@ -1,9 +1,18 @@
 import React from 'react'
 import "./card.css"
+import {Link} from "react-router-dom"
+import { useSelector, useDispatch } from 'react-redux'
+import { setExerciseDetails } from '../../app/features/exercisesSlice'
+
 
 const Card = ({exercise}) => {
+   const dispatch= useDispatch()
+   const handleExercise=()=>{
+      dispatch(setExerciseDetails(exercise))
+   }
   return (
-    <div className='card'>
+   <Link to={`/exercise/${exercise.id}`}>
+    <div className='card' onClick={handleExercise}>
      <div>
         <img src={exercise.gifUrl} alt='exercise' loading='lazy' />
      </div>
@@ -13,6 +22,7 @@ const Card = ({exercise}) => {
         <span>{exercise.target}</span>
      </div>
     </div>
+   </Link>
   )
 }
 

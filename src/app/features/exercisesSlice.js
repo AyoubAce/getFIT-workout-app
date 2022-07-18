@@ -1,43 +1,30 @@
 import { createSlice } from "@reduxjs/toolkit";
 
 const initialState = {
-  mainData:[],
+  database:[],
   exercises: [],
   showExercises: [],
-  exercise: {},
-  similarExercises: [],
-  searchResult: [],
+  exerciseDetails: {},
+ 
 };
 
 const exerciseSlice = createSlice({
   name: "data",
   initialState,
   reducers: {
-      getMainData: (state, action) => {
-        state.mainData = action.payload;
+      setMainData: (state, action) => {
+        state.database = action.payload;
       },
       setExercises: (state, action) => {
         state.exercises = action.payload;
       },
-    setShowExercises:(state,action)=>{
+      setShowExercises:(state,action)=>{
         state.showExercises= action.payload.slice(0,10)
-    },
-    //gets exercises as payload and return a set of unique body parts
-    setBodyParts:(state)=>{
-        state.bodyParts= new Set([...state.exercises].map(item=>item.bodyPart))
-    },
-    similarExercises: (state) => {
-      state.similarExercises = state.exercises
-        .filter((item) => {
-          return (
-            item.target === state.exercise.target &&
-            item.id !== state.exercise.id
-          );
-        })
-        .slice(0, 12);
-    },
-    searchedExercise: (state, action) => {},
+      },
+      setExerciseDetails: (state,action)=>{
+        state.exerciseDetails= action.payload
+      },
   },
 });
-export const { getMainData,setShowExercises, setExercises, setBodyParts, getBodyParts } = exerciseSlice.actions;
+export const { setMainData,setShowExercises, setExercises, setExerciseDetails,setBodyParts, getBodyParts } = exerciseSlice.actions;
 export default exerciseSlice.reducer;

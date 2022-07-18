@@ -1,0 +1,129 @@
+.exercise-page{
+    padding:4rem 2rem;
+}
+.exercise-page h2{
+    margin-bottom: 5rem;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    
+}
+.exercise-img{
+    margin-bottom: 2rem;
+    max-width: 400px;
+}
+.exercise-img img{
+ width: 100%;
+ border-radius: 10px;
+ box-shadow: var(--box-shadow);
+}
+
+.description h3{
+    margin-bottom: 1rem;
+    text-transform: capitalize;
+}
+table {
+    border-collapse: separate;
+    border-spacing:0 1rem;
+}
+
+td{
+    padding:0.5rem;  
+}
+td >span{
+    border-radius: 6px;
+    padding:0.5rem 1rem;
+    margin:0.5rem;
+    width: 100%;
+    display: block;
+    text-align: center;
+}
+/* tr:nth-of-type(1){
+    background-color:var(--light-purple) ;
+}
+tr:nth-of-type(2){
+    background-color:var(--dark-purple) ;
+
+}
+tr:nth-of-type(3){
+    background-color:var(--white-bg);
+    color:var(--dark-purple);  
+
+} */
+ tr:nth-of-type(1) span{
+     background-color:var(--light-purple) ;
+    }
+    tr:nth-of-type(2)  span{
+        background-color:var(--dark-purple) ;
+    }
+    tr:nth-of-type(3) span{
+        background-color:var(--white-bg);
+        color:var(--dark-purple);   
+}
+
+/* horizontal scroll - similar exercises */
+.horizontal-scroll{
+    position: relative;
+    padding:2rem 0;
+}
+.horizontal-scroll .arrow{
+    position: absolute;
+    top:0;
+     /* display: none; */
+}
+
+.horizontal-scroll .arrow.arrow-left{
+    right:5rem;
+    transform: rotate(180deg);
+  }
+.horizontal-scroll .arrow.arrow-right{
+    right:2rem;
+  }
+  
+.items-container{
+      display: flex;
+      gap:2rem;
+      overflow-x: scroll;
+      padding:1rem 0;
+  }
+  .items-container .card{
+    min-width: 250px;
+    flex:1;
+  }
+  .items-container::-webkit-scrollbar{
+      display: none;
+  }
+  .similar-exercises{
+    margin-top:5rem;
+  }
+  .similar-exercises > h3{
+    margin-top: 2rem;
+    font-size: 1.5rem;
+  }
+  .similar-exercises >h3 span{
+    color:var(--light-purple);
+  }
+  
+
+
+
+@media (min-width:768px) {
+    .exercise-page{
+        padding:4rem;
+    }
+    .exercise-img{
+        margin:0;
+    }
+    .exercise-details{
+        display: flex;
+        /* justify-content: space-between; */
+        gap:4rem;
+    }
+
+}
+@media (min-width:1024px) {
+    .exercise-page{
+        padding:4rem 7rem;
+    }
+    
+
+}

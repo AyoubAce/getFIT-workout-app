@@ -1,0 +1,35 @@
+footer{
+    padding:4rem 2rem; 
+    background-image: linear-gradient(90deg, var(--light-purple), var(--base-color));
+    background-image: -moz-linear-gradient(90deg, var(--light-purple), var(--base-color));
+    background-image: -o-linear-gradient(90deg, var(--light-purple), var(--base-color));
+    background-image: -webkit-linear-gradient(90deg, var(--light-purple), var(--base-color));
+}
+footer > div img{
+    width: 120px;
+}
+
+footer a>img{
+    width: 30px;
+    border-radius: 50%;
+    cursor: pointer;
+    background-color: var(--light-purple);
+}
+footer > div:nth-of-type(2){
+    padding:2rem 0;
+    color:var(--light-purple);
+}
+footer p>span {
+    font-family: var(--saira);
+    font-size: 1.2rem;
+}
+footer p{
+    font-weight: 100;
+}
+footer div a{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap:0.5rem;
+    color:var(--txt-white);
+}

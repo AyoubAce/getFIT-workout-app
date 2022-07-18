@@ -12,6 +12,7 @@ const Exercises = () => {
   const dispatch= useDispatch()
   const exercises= useSelector(state=>state.data.exercises)
   const showExercises= useSelector(state=>state.data.showExercises)
+  console.log(showExercises);
 
   const handlePageChange=(data)=>{
     dispatch(setShowExercises(exercises.slice(data.selected*10, (data.selected*10)+10)))

@@ -5,9 +5,7 @@ import { setExercises, setShowExercises} from "../../app/features/exercisesSlice
 
 const Categories = () => {
     //more than 1327 exercise
-    const mainData=useSelector(state=>state.data.mainData)
-    const exercises=useSelector(state=>state.data.exercises)
-
+    const mainData=useSelector(state=>state.data.database)
     //get body parts by removing duplicates 
     const bodyParts= new Set(mainData?.map(item=>item.bodyPart));
     const dispatch= useDispatch()
