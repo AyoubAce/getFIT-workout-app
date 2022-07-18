@@ -67,7 +67,8 @@ tr:nth-of-type(3){
 }
 .horizontal-scroll .arrow{
     position: absolute;
-    top:0;
+    bottom:0.5rem;
+    z-index: 80;
      /* display: none; */
 }
 
@@ -96,7 +97,7 @@ tr:nth-of-type(3){
     margin-top:5rem;
   }
   .similar-exercises > h3{
-    margin-top: 2rem;
+    margin-top: 3rem;
     font-size: 1.5rem;
   }
   .similar-exercises >h3 span{

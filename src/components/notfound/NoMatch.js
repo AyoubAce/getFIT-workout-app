@@ -1,9 +1,10 @@
 import React from 'react'
+import "./nomatch.css"
 
 const NoMatch = () => {
   return (
-    <div>
-    404 no match ... go jogging
+    <div className='notfound'>
+    <h1>404 Not Found!<br/>Go Jogging...</h1>
     </div>
   )
 }

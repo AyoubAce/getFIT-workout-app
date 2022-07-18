@@ -1,0 +1,10 @@
+.notfound{
+    height: 60vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.notfound h1{
+    font-family: var(--saira);
+    text-align: center;
+}

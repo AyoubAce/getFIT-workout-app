@@ -10,7 +10,7 @@ const Footer = () => {
         <img src={logo} alt="logo" />
       </div>
       <p>
-        <span>get FIT</span> from zero to hero  &copy; 2022
+       From zero to hero  &copy; 2022
       </p>
       <div>
        <a href="https://github.com/AyoubAce/getFIT-workout-app">
