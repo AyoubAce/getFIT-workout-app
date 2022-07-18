@@ -1,6 +1,5 @@
 import React, { useEffect } from "react";
 import axios from "axios";
-import "./App.css";
 import Hero from "./components/hero/Hero";
 import Navbar from "./components/nav/Navbar";
 import Exercises from "./components/exercises/Exercises";
