@@ -175,7 +175,7 @@ padding:1rem;
       
     }
 }
-@media (min-width:1526px){
+@media (min-width:1380px){
     .exercises .exercises-wrapper{
         grid-template-columns: 1fr 1fr 1fr 1fr;   
     }
