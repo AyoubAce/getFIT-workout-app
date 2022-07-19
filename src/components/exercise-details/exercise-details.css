@@ -9,7 +9,7 @@
 }
 .exercise-img{
     margin-bottom: 2rem;
-    max-width: 400px;
+    max-width: 600px;
 }
 .exercise-img img{
  width: 100%;
@@ -127,6 +127,9 @@ tr:nth-of-type(3){
 @media (min-width:1024px) {
     .exercise-page{
         padding:4rem 7rem;
+    }
+    .exercise-details{
+        gap:7rem;
     }
     
 
