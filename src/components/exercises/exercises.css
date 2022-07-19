@@ -179,4 +179,7 @@ padding:1rem;
     .exercises .exercises-wrapper{
         grid-template-columns: 1fr 1fr 1fr 1fr;   
     }
+     .categories-container .arrow{
+        display: none;
+    }
 }
