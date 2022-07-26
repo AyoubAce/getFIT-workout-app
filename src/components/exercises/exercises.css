@@ -179,7 +179,9 @@ padding:1rem;
 @media (min-width:1326px){
     .exercises-section{
         padding:3rem 12rem;
-     }
+     } 
+}
+@media (min-width:1550px){
      .categories-container .arrow{
         display: none;
     }
