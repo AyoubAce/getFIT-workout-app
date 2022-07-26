@@ -6,15 +6,9 @@
   text-transform: uppercase;
   letter-spacing: 0.5px;
 }
-<<<<<<< HEAD
 .exercise-img {
   margin-bottom: 2rem;
   max-width: 400px;
-=======
-.exercise-img{
-    margin-bottom: 2rem;
-    max-width: 650px;
->>>>>>> 8a936fd6b7807a844acfc49755c30d829d85f89d
 }
 .exercise-img img {
   width: 100%;
@@ -140,61 +134,4 @@ tr:nth-of-type(3) span {
     padding: 6rem 10rem;
   }
   
-<<<<<<< HEAD
 }
-=======
-.items-container{
-      display: flex;
-      gap:2rem;
-      overflow-x: scroll;
-      padding:1rem 0;
-  }
-  .items-container .card{
-    min-width: 250px;
-    flex:1;
-  }
-  .items-container::-webkit-scrollbar{
-      display: none;
-  }
-  .similar-exercises{
-    margin-top:5rem;
-  }
-  .similar-exercises > h3{
-    margin-top: 3rem;
-    font-size: 1.5rem;
-  }
-  .similar-exercises >h3 span{
-    color:var(--light-purple);
-  }
-  
-
-
-
-@media (min-width:768px) {
-    .exercise-page{
-        padding:4rem;
-    }
-    .exercise-img{
-        margin:0;
-    }
-    .exercise-details{
-        display: flex;
-        /* justify-content: space-between; */
-        gap:4rem;
-    }
-    .horizontal-scroll .arrow{
-        display: block;
-    }
-
-}
-@media (min-width:1024px) {
-    .exercise-page{
-        padding:4rem 7rem;
-    }
-    .exercise-details{
-        gap:7rem;
-    }
-    
-
-}
->>>>>>> 8a936fd6b7807a844acfc49755c30d829d85f89d
