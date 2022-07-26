@@ -6,3 +6,7 @@
  - create a .env file and enter your api key.
  - `npm start` 
  
+ ### Link 
+ https://getfitgym.netlify.app/
+ 
+ 
