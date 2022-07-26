@@ -175,9 +175,20 @@ padding:1rem;
       
     }
 }
+<<<<<<< HEAD
 @media (min-width:1326px){
     .exercises-section{
         padding:3rem 12rem;
      }
     
 }
+=======
+@media (min-width:1380px){
+    .exercises .exercises-wrapper{
+        grid-template-columns: 1fr 1fr 1fr 1fr;   
+    }
+     .categories-container .arrow{
+        display: none;
+    }
+}
+>>>>>>> 8a936fd6b7807a844acfc49755c30d829d85f89d
