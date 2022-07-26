@@ -180,9 +180,12 @@ padding:1rem;
     .exercises-section{
         padding:3rem 12rem;
      }
-     .categories-container .arrow{
+     
+    
+}
+@media (min-width:1550px){
+    .categories-container .arrow{
         display: none;
     }
-    
 }
 

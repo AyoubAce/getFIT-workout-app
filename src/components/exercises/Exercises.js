@@ -1,4 +1,4 @@
-import React from "react";
+import React, {useRef} from "react";
 import Categories from "./Categories";
 import "./exercises.css";
 import SearchExercise from "./SearchExercise";
@@ -12,9 +12,13 @@ const Exercises = () => {
   const dispatch= useDispatch()
   const exercises= useSelector(state=>state.data.exercises)
   const showExercises= useSelector(state=>state.data.showExercises)
+  const exercisesRef= useRef()
 
   const handlePageChange=(data)=>{
     dispatch(setShowExercises(exercises.slice(data.selected*10, (data.selected*10)+10)))
+    //scroll top to see exercises
+    window.scrollTo(0,exercisesRef.current.offsetTop)
+
   }
   return (
     <section className="exercises-section" id="exercises">
@@ -23,7 +27,7 @@ const Exercises = () => {
       </h2>
       <SearchExercise />
       <Categories/>
-      <div className="exercises">
+      <div className="exercises" ref={exercisesRef}>
       <h3>Exercises</h3>
       <div className="exercises-wrapper">
       {showExercises?.map((item,index)=>{
