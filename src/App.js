@@ -28,6 +28,7 @@ function App() {
         },
       })
       .then((res) => {
+        console.log("refetched again");
         dispatch(setMainData(res.data));
         dispatch(setExercises(res.data));
         dispatch(setShowExercises(res.data.slice(0, 10)));

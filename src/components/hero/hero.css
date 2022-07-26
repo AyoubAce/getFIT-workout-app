@@ -1,12 +1,13 @@
 .hero-section{
 color:var(--txt-white);
-padding:5rem 1rem;
+padding:5rem 2rem;
 display: flex;
 flex-direction: column;
 justify-content: space-between;
 align-items: center;
 position: relative;
-/* height: 70vh; */
+gap:4rem;
+ /* height: 90vh;  */
 
 }
 /* blury pink light on top */
@@ -17,11 +18,12 @@ position: relative;
     width: 150px;
     z-index: -1;
     top:3rem;
-    left:2rem;
-    filter: blur(70px);
+    right:3rem;
+    filter: blur(110px);
     border:1px solid salmon;
 
 }
+
 /* get started animation */
 .hero-section .absolute{
     position: absolute;
@@ -54,7 +56,7 @@ right:.5rem;
 clip-path: polygon(100% 0%, 75% 50%, 100% 100%, 25% 100%, 0% 50%, 25% 0%);
 animation: get-started 3000ms ease-out infinite;
 }
-.get-started>span{
+.get-started span{
     z-index: 5;
     padding:0 1rem;
     text-transform: uppercase;
@@ -78,6 +80,7 @@ animation: get-started 3000ms ease-out infinite;
     font-size: 3.5rem;
     text-transform: uppercase;
     font-family: var(--saira);
+    margin:-1rem 0;
 }
 .hero-left h3{
     font-size: 1.5rem;
@@ -110,13 +113,13 @@ animation: get-started 3000ms ease-out infinite;
 @media (min-width:768px) {
     .hero-section{
        flex-direction: row;
-       padding:5rem 4rem;
+       padding:5rem 5rem;
     }
     .hero-left{
         order:1;
     }
     .hero-left h1{
-        font-size: 4rem;
+        font-size: 4.5rem;
         text-transform: uppercase;
         font-family: var(--saira);
     }
@@ -136,17 +139,27 @@ animation: get-started 3000ms ease-out infinite;
 
 @media (min-width:1024px) {
     .hero-section{
-        padding:5rem 7rem;
+        padding:7rem 10rem;
+        gap:7rem;
+
     }
     .hero-left h1{
-        font-size: 5rem;
+        font-size: 6rem;
  
     }
     .hero-left h3{
-        font-size: 2rem;
+        font-size: 2.3rem;
     }
     
     .hero-right img{
         width:340px;
+    }
+}
+
+@media (min-width:1324px) {
+    .hero-section{
+        padding:7rem 12rem;
+ 
+
     }
 }

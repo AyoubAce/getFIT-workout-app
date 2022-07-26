@@ -2,7 +2,7 @@
     /* background-color: var(--white-bg); */
     padding:3rem 2rem;
     /* color: var(--base-color); */
-    color: var(--txt-white);
+    color: var(--txt-white);  
 }
 .exercises-section h2 {
  text-align: center;
@@ -15,7 +15,6 @@
 /* search section  */
 .search-container{
     display: flex;
-    gap:0.5rem;
     justify-content: center;
     align-items: center;
     padding:1rem 0;
@@ -35,7 +34,7 @@ width: 100%;
 border:0;
 outline: 0;
 padding:0.5rem 1rem;
-border-radius: 6px;
+border-radius: 6px 0 0 6px;
 box-shadow: var(--box-shadow);
 color:var(--dark-purple);
 }
@@ -45,8 +44,9 @@ color:var(--dark-purple);
     outline: 0;
     color:var(--txt-white);
     background-color: var(--light-purple);
-    border-radius: 6px;
+    border-radius: 0 6px 6px 0;
     box-shadow: var(--box-shadow);
+    cursor: pointer;
 }
 .search-container button:hover{
     background-color: var(--pink);
@@ -89,8 +89,8 @@ color:var(--dark-purple);
 }
 .categories > span{
     padding:0.5rem 1rem;
-    background-color: var(--white-bg);
-    color:var(--dark-purple);
+    background-color: var(--dark-purple);
+    color:var(--white-bg);
     border-radius: 10px;
     cursor: pointer;
     box-shadow: var(--box-shadow);
@@ -107,7 +107,7 @@ color:var(--dark-purple);
 .exercises>  h3{
     margin-bottom: 2rem;
 }
-.exercises .exercises-wrapper{
+ .exercises-wrapper{
     display:flex;
     align-items: center;
     flex-direction: column;
@@ -117,7 +117,7 @@ color:var(--dark-purple);
 
 /* pagination */
 .pagination-container{
-margin-top: 1.5rem;
+margin-top: 3rem;
 padding:1rem;
 
 }
@@ -152,12 +152,12 @@ padding:1rem;
 
 @media (min-width:768px) {
     .exercises-section{
-        padding:3rem 4rem;
+        padding:3rem 5rem;
     }
     .categories-container .arrow{
         display: block;
     }
-    .exercises .exercises-wrapper{
+    .exercises-wrapper{
         display:grid;
         grid-template-columns: 1fr 1fr;
         gap:1.5rem;
@@ -166,17 +166,18 @@ padding:1rem;
 }
 @media (min-width:1024px) {
      .exercises-section{
-        padding:3rem 7rem;
+        padding:3rem 10rem;
      }
-     .exercises .exercises-wrapper{
+     .exercises-wrapper{
         
         grid-template-columns: 1fr 1fr 1fr;
         gap:2rem;
       
     }
 }
-@media (min-width:1526px){
-    .exercises .exercises-wrapper{
-        grid-template-columns: 1fr 1fr 1fr 1fr;   
-    }
+@media (min-width:1326px){
+    .exercises-section{
+        padding:3rem 12rem;
+     }
+    
 }

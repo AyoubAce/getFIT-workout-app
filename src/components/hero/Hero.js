@@ -7,10 +7,13 @@ const Hero = () => {
     <section className="hero-section">
       <span className="blur-effect"></span>
       <div className="absolute">
+      <a href="#exercises">
         <div className="get-started">
           <div></div>
           <span>get started</span>
+        
         </div>
+      </a>
       </div>
       <div className="hero-left">
         <h3>Let's get you in</h3>

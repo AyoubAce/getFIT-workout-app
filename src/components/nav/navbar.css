@@ -1,10 +1,20 @@
 header{
-    background-color: var(--base-color);
-   display: flex;
+
+   /* display: flex;
    justify-content: space-between;
-   align-items: center;
+   align-items: center; */
    color:var(--txt-white);
    padding:1rem 2rem;
+   position: relative;
+}
+header .logo{
+    position: absolute;
+    top:50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    -ms-transform: translate(-50%,-50%);
+    -moz-transform: translate(-50%,-50%);
+    -o-transform: translate(-50%,-50%);
 }
 header img{
     width: 120px;
@@ -23,13 +33,13 @@ header li{
 
 @media (min-width:768px) {
     header{
-        padding:1rem 4rem;
+        padding:1rem 5rem;
     }
  
 }
 @media (min-width:1024px) {
     header{
-        padding:1rem 7rem;
+        padding:1rem 10rem;
      }
  
 }

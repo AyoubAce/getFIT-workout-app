@@ -1,24 +1,23 @@
-import React,{useState, useEffect} from "react";
+import React from "react";
 import Categories from "./Categories";
 import "./exercises.css";
 import SearchExercise from "./SearchExercise";
 import { useSelector, useDispatch } from "react-redux/es/exports";
 import Card from "../card/Card";
 import ReactPaginate from "react-paginate";
-import { setExercises,setShowExercises } from "../../app/features/exercisesSlice";
+import { setShowExercises } from "../../app/features/exercisesSlice";
 
 
 const Exercises = () => {
   const dispatch= useDispatch()
   const exercises= useSelector(state=>state.data.exercises)
   const showExercises= useSelector(state=>state.data.showExercises)
-  console.log(showExercises);
 
   const handlePageChange=(data)=>{
     dispatch(setShowExercises(exercises.slice(data.selected*10, (data.selected*10)+10)))
   }
   return (
-    <section className="exercises-section">
+    <section className="exercises-section" id="exercises">
       <h2>
         READY TO <span>get FIT!</span>
       </h2>

@@ -32,7 +32,7 @@ const ExerciseDetails = () => {
       );
   //similar exercises by target muscle
   const similarTargets= mainData?.filter(item=>item.equipment===exercise.equipment && item.id !== exercise.id)
-  console.log("target", similarTargets);
+
   return (
     <section className="exercise-page">
       <h2>Consistency makes all the difference</h2>
