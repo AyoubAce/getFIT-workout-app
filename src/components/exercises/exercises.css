@@ -45,7 +45,7 @@ color:var(--dark-purple);
     color:var(--txt-white);
     background-color: var(--light-purple);
     border-radius: 0 6px 6px 0;
-    box-shadow: var(--box-shadow);
+    box-shadow: 2px 2px 10px -3px rgba(1, 2, 1, 0.85);
     cursor: pointer;
 }
 .search-container button:hover{
