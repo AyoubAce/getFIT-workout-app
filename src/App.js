@@ -13,10 +13,16 @@ import { BrowserRouter, Route, Routes } from "react-router-dom";
 import ExerciseDetails from "./components/exercise-details/ExerciseDetails";
 import NoMatch from "./components/notfound/NoMatch";
 import Footer from "./components/footer/Footer";
+import MyCollection from "./components/mycollection/MyCollection";
+
+// import Sidebar from "./components/sidebar/Sidebar";
+// import { getCollection } from "./app/features/collectionSlice";
 function App() {
   const dispatch = useDispatch();
   useEffect(() => {
     fetchData();
+    // dispatch(getCollection())
+
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
   const fetchData = async () => {
@@ -40,6 +46,7 @@ function App() {
     <BrowserRouter>
       <div className="App">
         <Navbar />
+        {/* <Sidebar/> */}
         <Routes>
           <Route
             path="/"
@@ -51,10 +58,11 @@ function App() {
             }
           />
           <Route path="/exercise/:id" element={<ExerciseDetails />} />
+          <Route path="/collection" element={<MyCollection />} />
           <Route path="*" element={<NoMatch />} />
         </Routes>
+        </div>
         <Footer />
-      </div>
     </BrowserRouter>
   );
 }

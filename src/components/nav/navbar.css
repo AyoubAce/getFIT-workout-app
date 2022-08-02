@@ -1,8 +1,4 @@
 header{
-
-   /* display: flex;
-   justify-content: space-between;
-   align-items: center; */
    color:var(--txt-white);
    padding:1rem 2rem;
    position: relative;
@@ -22,6 +18,8 @@ header img{
 header ul{
     list-style: none;
     display: flex;
+    justify-content: space-between;
+    text-transform: capitalize;
     gap:1.5rem;
 }
 header li:hover{
@@ -29,7 +27,16 @@ header li:hover{
 }
 header li{
     padding:0.5rem 0;
+    font-weight: 600;
 }
+header li a{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap:2px;
+}
+
+
 
 @media (min-width:768px) {
     header{
