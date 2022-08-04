@@ -89,26 +89,7 @@
 }
 
 
-.favorite::before{
-    content: attr(data-hover);
-    position: absolute;
-    bottom:-1.5rem;
-    right:0rem;
-    z-index: 55;
-    opacity:0;
-    padding:5px 10px;
-    color:var(--txt-white);
-    background-color: rgba(63, 51, 81,0.65);
-    width: fit-content;
-    white-space: nowrap;
-    font-size: 0.9rem;
-    font-weight: 300;
-    border-radius: 5px;
-}
-.favorite:hover::before{
-    opacity: 1;
 
-}
 .favorite svg{
     display: block;
     position: relative;
@@ -119,6 +100,29 @@
 }
 .favorite svg:hover{
     transform: scale(0.9);
+}
+
+@media (min-width:1024px) {
+    .favorite::before{
+        content: attr(data-hover);
+        position: absolute;
+        bottom:-1.5rem;
+        right:0rem;
+        z-index: 55;
+        opacity:0;
+        padding:5px 10px;
+        color:var(--txt-white);
+        background-color: rgba(63, 51, 81,0.65);
+        width: fit-content;
+        white-space: nowrap;
+        font-size: 0.9rem;
+        font-weight: 300;
+        border-radius: 5px;
+    }
+    .favorite:hover::before{
+        opacity: 1;
+    
+    }
 }
 
 @keyframes animate  {
